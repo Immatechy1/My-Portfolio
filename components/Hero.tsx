@@ -22,7 +22,7 @@ export default function Hero({}: Props) {
         className='relative rounded-full h-40 w-40 mx-auto object-cover' 
         src='https://images.unsplash.com/photo-1664008824754-2eff11fe7a54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60' 
         alt='' />
-        <div className='z-20'>
+        <div className='z-20 '>
             <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[10px]'>Front-end Engineer</h2>
             <h1 className='text-5xl lg:text-6xl font-semibold scroll-px-10'>
                 <span className='mr-3'>{text}</span>
