@@ -1,29 +1,36 @@
+import { url } from 'inspector';
 import Link from 'next/link';
 import React from 'react'
 import { Cursor, useTypewriter } from "react-simple-typewriter"
+import { urlFor } from '../sanity';
+import { PageInfo } from '../typings';
 import BackgroundCircles from "./BackgroundCircles"
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo
+}
 
-export default function Hero({}: Props) {
+export default function Hero({pageInfo}: Props) {
     const [text, count] = useTypewriter ({
         words: [
-            "Hey there, My Name is Immaculeta Nwokejeme",
+            `Hey there, My Name is ${pageInfo?.name}`,
             "I am a Front-end Developer",
             "<ButLovesToCodeMore/>",
         ],
         loop: true,
         delaySpeed: 2000,
     });
-  return (
+    return (
     <div className='h-screen flex flex-col space-y-4 items-center justify-center text-center overflow-hidden'>
         <BackgroundCircles />
         <img
         className='relative rounded-full h-40 w-40 mx-auto object-cover' 
-        src='https://images.unsplash.com/photo-1664008824754-2eff11fe7a54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60' 
+        src={urlFor(pageInfo?.heroImage).url()}
         alt='' />
         <div className='z-20 '>
-            <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[10px]'>Front-end Engineer</h2>
+            <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[10px]'>
+                {pageInfo?.role}
+            </h2>
             <h1 className='text-5xl lg:text-6xl font-semibold scroll-px-10'>
                 <span className='mr-3'>{text}</span>
                 <Cursor cursorColor='#f7ab0a'/>
