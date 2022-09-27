@@ -1,9 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Experience } from '../typings';
 
-type Props = {}
+type Props = {
+    experiences: Experience[];
+};
+  
 
-export default function ExperienceCard({}: Props) {
+export default function ExperienceCard({exper}: Props) {
   return (
     <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0
         w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929 p-10
