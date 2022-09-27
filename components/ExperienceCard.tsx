@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 import { Experience } from '../typings';
 
 type Props = {
-    experiences: Experience[];
+    experience: Experience[];
 };
   
 
-export default function ExperienceCard({exper}: Props) {
+export default function ExperienceCard({experience}: Props) {
   return (
     <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0
         w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929 p-10

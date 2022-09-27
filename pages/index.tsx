@@ -8,7 +8,7 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import ContactMe from "../components/ContactMe"
 import Link from 'next/link';
-import { PageInfo, Experience, Skill, Project, social  } from "../typings"
+import { PageInfo, Experience, Skill, Project, Social  } from "../typings"
 import { fetchPageInfo } from '../Utils/fetchPageInfo';
 import { fetchExperience } from '../Utils/fetchExperience';
 import { fetchSkills } from '../Utils/fetchSkills';
@@ -17,13 +17,13 @@ import { fetchsocial } from '../Utils/fetchSocials';
 
 type Props = {
   pageInfo: PageInfo;
-  experiences: Experience[];
+  experience: Experience[];
   skills: Skill[];
   projects: Project[];
-  socials: social[];
+  socials: Social[];
 };
 
-const Home = ({pageInfo, experiences, skills, projects, socials}:Props) => {
+const Home = ({pageInfo, experience, skills, projects, socials}:Props) => {
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory
     overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20">
@@ -42,7 +42,7 @@ const Home = ({pageInfo, experiences, skills, projects, socials}:Props) => {
       </section>
 
       <section  id='experience' className='snap-center'>
-        <WorkExperience experiences={experiences}/>
+        <WorkExperience experience={experience}/>
       </section>
 
       <section  id='skills' className='snap-start'>
@@ -77,15 +77,15 @@ export default Home;
 
 export const getStaticProps : GetStaticProps<Props> = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
-  const experiences: Experience[] = await fetchExperience();
+  const experience: Experience[] = await fetchExperience();
   const skills: Skill[] = await fetchSkills();
   const projects: Project[] = await fetchProject();
-  const socials: social[] = await fetchsocial();
+  const socials: Social[] = await fetchsocial();
 
   return {
     props: {
       pageInfo,
-      experiences,
+      experience,
       skills,
       projects,
       socials,

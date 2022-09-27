@@ -4,10 +4,10 @@ import ExperienceCard from './ExperienceCard';
 import { Experience } from '../typings';
 
 type Props = {
-  experiences: Experience[];
+  experience: Experience[];
 };
 
-function WorkExperience({experiences}: Props) {
+function WorkExperience({experience}: Props) {
   return (
     <motion.div
       initial={{opacity: 0}}
@@ -22,8 +22,8 @@ function WorkExperience({experiences}: Props) {
 
       <div className='w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory
         scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f4ab0a]/80'>
-        {experiences?.map(experiences=> (
-          <ExperienceCard key={experiences._id} experiences={experiences} />
+        {experience?.map(experience=> (
+          <ExperienceCard key={experience._id} experience={experience} />
         ))}
       </div>
     </motion.div>
