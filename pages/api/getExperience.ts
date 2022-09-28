@@ -6,13 +6,13 @@ import { Experience } from "../../typings"
 
 // Execute querry
 const query = groq`
-    *[_type == "project"] {
+    *[_type == "experience"] {
         technologies[] =>  
     }
 `;
 
 type Data = {
-   experiences: Experience[]
+   experience: Experience[]
 }
 
 export default async function handler(
@@ -21,7 +21,7 @@ export default async function handler(
 )  
 
 {
-    const experiences: Experience[] = await sanityClient.fetch(query);
-    res.status(200).json({experiences })
+    const experience: Experience[] = await sanityClient.fetch(query);
+    res.status(200).json({ experience })
 }
    
