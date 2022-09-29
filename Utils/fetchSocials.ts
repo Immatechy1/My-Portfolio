@@ -1,10 +1,10 @@
-import { social } from "../typings"
+import { Social } from "../typings"
 
 export const fetchsocial = async () => {
-    const res = await fetch (`${process.env.NEXT_PUBLIC_BASE_URL}/api/get/socials`);
+    const res = await fetch (`${process.env.NEXT_PUBLIC_BASE_URL}/api/getSocials`);
 
     const data = await res.json();
-    const socials: social[] = data.socials;
+    const socials: Social[] = data.socials;
 
     // console.log("fetching", socials);
 
