@@ -1,15 +1,11 @@
-
 import { motion } from 'framer-motion';
-import { url } from 'inspector';
 import React from 'react'
-import { urlFor } from '../sanity';
-import { PageInfo } from '../typings';
 
-type Props = {
-  pageInfo: PageInfo
-}
 
-export default function About({pageInfo}: Props) {
+type Props = {}
+ 
+
+export default function About({}: Props) {
   return (
 
     <motion.div
@@ -31,7 +27,7 @@ export default function About({pageInfo}: Props) {
             }}
             whileInView={{ opacity: 1,  x: 0 }}
             viewport={{once: true}}
-            // src={urlFor(pageInfo?.src={urlFor(pageInfo?.profilePic).url()}).url()}
+            src=""
             className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-68
             md:95 xl:w-[500px] xl:h-[600px]'
         />
@@ -39,7 +35,10 @@ export default function About({pageInfo}: Props) {
         <div className='space-y-10 px-0 md:px-10'>
             <h4 className='text-4xl font-semibold' >Here is a <span className='underline decoration-[#f7ab0a]/50'></span> little background</h4>
             <p className='text-base'>
-              {pageInfo?.address}
+            Hi, I'm Immaculeta. I am a design-oriented front-end developer from Anambra State, Nigeria. I strive to build immersive and beautiful              
+            web applications through carefully crafted code and user-centric design. Fueled by high energy levels and boundless enthusiasm,              
+            I'm easily inspired and more than willing to follow my fascinations wherever they take me. My abundant energy fuels me in the pursuit of              
+            many interests and endeavours. I'm a fast learner, who is able to pick up new skills and juggle different projects and roles with relative ease.
             </p>
         </div>
     </motion.div>
