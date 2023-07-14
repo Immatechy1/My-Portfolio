@@ -1,5 +1,9 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import About from "../components/About";
+// import ContactMe from "../components/ContactMe"
+import Header from '../components/Header';
+import Hero from '../components/Hero';
 // import About from "../components/About";
 // import ContactMe from "../components/ContactMe"
 import Header from '../components/Header';
@@ -18,6 +22,13 @@ const Home = () => {
       </Head>
 
       <Header/>
+      
+      <section id='hero' className='snap-center'>
+        <Hero/>
+      </section>
+
+      <section  id='about' className='snap-center'>
+        <About  />
 
       <section id='hero' className='snap-start'>
         {/* <Hero/> */}
@@ -25,6 +36,7 @@ const Home = () => {
 
       <section  id='about' className='snap-center'>
         {/* <About  /> */}
+
       </section>
 
       <section  id='experience' className='snap-center'>
