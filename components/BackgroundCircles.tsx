@@ -26,5 +26,5 @@ function BackgroundCircles({}: Props) {
     </motion.div>
   )
 }
-
+       
 export default BackgroundCircles

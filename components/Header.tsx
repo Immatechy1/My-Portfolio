@@ -1,8 +1,6 @@
 import React from 'react'
 import { SocialIcon } from "react-social-icons"
 import { motion } from "framer-motion"
-import Link from 'next/link'
-
 
 type Props = {};
 
@@ -25,6 +23,7 @@ export default function Header({}: Props) {
             }}
         
             className='flex flex-row items-center'>
+
             <SocialIcon
                 url="https://github.com/Immatechy1"
                 fgColor='gray'
