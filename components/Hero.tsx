@@ -8,7 +8,7 @@ type Props = {}
 export default function Hero({}: Props) {
     const [text, count] = useTypewriter ({
        words: [
-           `My Name is Immaculeta Nwokejeme`,
+           `Hey there, My Name is Immaculeta Nwokejeme`,
            "I am a Front-end Developer",
            "<ButLovesToCodeMore/>",
        ],
@@ -16,11 +16,11 @@ export default function Hero({}: Props) {
        delaySpeed: 2000,
    });
 
-   return (  
-    <div className='h-screen flex flex-col space-y-6  items-center justify-center text-center'>
+   return (
+    <div className='h-screen flex flex-col space-y-8  items-center justify-center text-center overflow-hidden'>
         <BackgroundCircles />
         <img
-            className='relative rounded-full h-40 w-40 max-auto object-cover' 
+            className='relative rounded-full h-32 w-32 max-auto object-cover' 
             src="https://i.pinimg.com/564x/b0/52/7c/b0527c4ca341516acff918f4a38590b8.jpg"
             alt=""
         />
