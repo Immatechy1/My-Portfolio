@@ -34,27 +34,14 @@ export default defineType({
       type: 'date',
     }),
     defineField({
-      name: 'backgroundInformation',
-      title: 'BackgroundInformation',
-      type: 'string',
-    }),
-    defineField({
       name: 'isCurrentlyWorkingHere',
       title: 'IsCurrentlyWorkingHere',
       type: 'boolean',
     }),
     defineField({
-      name: 'profilePic',
-      title: 'ProfilePic',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    }),
-    defineField({
       name: 'technologies',
       title: 'Technologies',
-        type: 'array',
+      type: 'array',
         of: [{ type: "reference", to: {type: "block" }}]
     }),
     defineField({

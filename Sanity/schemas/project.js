@@ -36,10 +36,4 @@ export default defineType({
       type: 'url',
     }),
   ],
-  // preview: {
-  //   select: {
-  //     title: 'name',
-  //     media: 'image',
-  //   },
-  // },
 })

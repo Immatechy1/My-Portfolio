@@ -7,6 +7,7 @@ import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import WorkExperience from '../components/WorkExperience';
 import Link from 'next/link';
+import { GetStaticProps } from 'next';
 
 const Home = () => {
   return (
