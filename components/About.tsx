@@ -1,9 +1,13 @@
+import { urlFor } from '@/sanity';
+import { PageInfo } from '@/typings';
 import { motion } from 'framer-motion';
 import React from 'react'
 
-type Props = {}
+type Props = {
+  pageInfo: PageInfo,
+}
  
-export default function About({}: Props) {
+export default function About({ pageInfo }: Props) {
   return (
     <motion.div
       initial={{opacity: 0}}
@@ -24,7 +28,7 @@ export default function About({}: Props) {
             }}
             whileInView={{ opacity: 1,  x: 0 }}
             viewport={{once: true}}
-            src="https://i.pinimg.com/564x/b0/52/7c/b0527c4ca341516acff918f4a38590b8.jpg"
+            src={urlFor(pageInfo?.profilePic).url()}
             className='mt-96 sm:mt-40 md:-mt-20 lg:mb-80 xl:-mb-96 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-[250px]
             md:h-[300px] lg:w-[320px] lg:h-[350px] lg:rounded-lg xl:w-[350px] xl:h-[350px]'
         />
@@ -32,10 +36,7 @@ export default function About({}: Props) {
         <div className='space-y-10 px-0 md:px-8 lg:px-10 mt-10 sm:mt-10 md:-mt-24 lg:mb-80 xl:-mb-96 '>
             <h4 className='text-3xl font-semibold' >Here is a{" "} <span className='underline decoration-[#f7ab0a]/50'>little</span>{" "}background</h4>
             <p className='text-base'>
-            Hi, I'm Immaculeta. I am a design-oriented front-end developer from Anambra State, Nigeria. I strive to build immersive and beautiful              
-            web applications through carefully crafted code and user-centric design. Fueled by high energy levels and boundless enthusiasm,              
-            I'm easily inspired and more than willing to follow my fascinations wherever they take me. My abundant energy fuels me in the pursuit of              
-            many interests and endeavours. I'm a fast learner, who is able to pick up new skills and juggle different projects and roles with relative ease.
+              {pageInfo?.backgroundInformation}
             </p>
         </div>
     </motion.div>
