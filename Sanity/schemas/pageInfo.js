@@ -53,8 +53,8 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'bio',
-      title: 'Bio',
+      name: 'socials',
+      title: 'Socials',
       type: 'array',
       of: [{ type: 'reference', to: { type: 'block' } }],
     }),

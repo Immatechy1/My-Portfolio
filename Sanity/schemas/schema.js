@@ -9,6 +9,5 @@ export const schemaTypes = [
     skill,
     pageInfo,
     social,
-    project,
-    
+    project,   
 ]
