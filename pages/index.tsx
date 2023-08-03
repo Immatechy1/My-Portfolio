@@ -87,28 +87,13 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       experiences,
       skills,
       projects,
-      socials
-    }
-  }
-}
-
-// export async function getStaticProps() {
-//   const pageInfo: PageInfo = await fetchPageInfo();
-//   const experiences: Experience[] = await fetchExperiences();
-//   const skills: Skill[] = await fetchSkills();
-//   const projects: Project[] = await fetchProjects();
-//   const socials: Social[] = await fetchSocial();
-
-//   return {
-//     props:{
-//       pageInfo,
-//       experiences,
-//       skills,
-//       projects,
-//       socials
-//     }
-//   }
-
-// }
+      socials,
+    },
+    // Next.js will attempt to re-generate the page:
+    //- When a request cores in
+    //- At most once every 10 seconds
+    revalidate: 10,
+  };
+};
 
 
