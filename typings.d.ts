@@ -48,6 +48,7 @@ export interface Project extends SanityBody {
 }
   
 export interface Experience extends SanityBody {
+    map(arg0: (experience: any) => import("react").JSX.Element): import("react").ReactNode;
     _type: "experience";
     company: string;
     companyImage: Image;
@@ -60,6 +61,7 @@ export interface Experience extends SanityBody {
 }
   
 export interface Social extends SanityBody {
+    map(arg0: () => void): import("react").ReactNode | import("framer-motion").MotionValue<number> | import("framer-motion").MotionValue<string>;
     _type: "social";
     title: string;
     url: string;

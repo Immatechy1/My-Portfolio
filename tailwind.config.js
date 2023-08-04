@@ -5,13 +5,18 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}", 
   ],
   theme: {
-    screens: {
-      sm: { max: "375px" },
-      md: "550px",
-      lg: "820px",
-      xl: "1024px",
-    },
     extend: {},
+    screens: {
+      'md': '869px',
+      'lg': '500px',
+      'xl' : '1500px'
+      
+     
+    },
+    fontFamily: {
+      'special' : 'Stinger Fit Trial, sans-serif',
+      'special1' : 'Heading Now Trial, sans-serif'
+    }
   },
   plugins: [],
 };
