@@ -6,8 +6,13 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'name',
-      title: 'Name',
+      name: 'firstName',
+      title: 'FirstName',
+      type: 'string',
+    }),
+    defineField({
+      name: 'lastName',
+      title: 'LastName',
       type: 'string',
     }),
     defineField({
@@ -17,6 +22,14 @@ export default defineType({
     }),
     defineField({
       name: 'heroImage',
+      title: 'Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'blockImage',
       title: 'Image',
       type: 'image',
       options: {
