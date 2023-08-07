@@ -13,10 +13,10 @@ export default function About({ pageInfo }: Props) {
       initial={{opacity: 0}}
       whileInView={{ opacity: 1 }}
       transition={{duration: 1.5,}}
-      className='flex flex-col relative h-screen text-center md:text-left
-        md:flex-row lg:flex-row max-w-7xl px-10 xl:px-20 justify-evenly mx-auto items-center sm:mt-40 md:-mt-20 lg:mt-10 xl:mt-64'>
-        <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
-            About
+      className='bg-black flex flex-col  relative mt-[5rem] sm:mt-[5.8rem]  text-center md:text-left
+        md:flex-row md:text-left lg:flex-row px-4 md:px-8 lg:px-[8rem] justify-evenly items-center'>
+        <h3 className='uppercase md:absolute md:top-24 tracking-[20px] text-gray-500 text-2xl'>
+            About Me
         </h3>
         <motion.img 
             initial={{
@@ -29,15 +29,13 @@ export default function About({ pageInfo }: Props) {
             whileInView={{ opacity: 1,  x: 0 }}
             viewport={{once: true}}
             src={urlFor(pageInfo?.profilePic).url()}
-            className='mt-96 sm:mt-40 md:-mt-20 lg:mb-80 xl:-mb-96 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-[250px]
-            md:h-[300px] lg:w-[320px] lg:h-[350px] lg:rounded-lg xl:w-[350px] xl:h-[350px]'
+            className='mt-[3rem] sm:mt-[4rem] md:mt-[14rem] flex-shrink-0 w-56 h-56 md:w-[300px] md:h-[300px]
+            lg:w-[400px] lg:h-[400px] rounded-full object-cover md:rounded-lg  lg:rounded-lg'
         />
-
-        <div className='space-y-10 px-0 md:px-8 lg:px-10 mt-10 sm:mt-10 md:-mt-24 lg:mb-80 xl:-mb-96 '>
-            <h4 className='text-3xl font-semibold' >Here is a{" "} <span className='underline decoration-[#f7ab0a]/50'>little</span>{" "}background</h4>
-            <p className='text-base'>
-              {pageInfo?.backgroundInformation}
-            </p>
+        <div className='space-y-10 mt-[3rem] sm:mt-[4rem] md:mt-[14rem] md:pl-[1rem] md:pl-[4rem] '>
+          <p className='text-base lg:text-xl'>
+            {pageInfo?.backgroundInformation}
+          </p>
         </div>
     </motion.div>
   )

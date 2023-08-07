@@ -15,7 +15,7 @@ export default function Header({socials}: Props) {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className='sticky top-0 p-5 flex justify-between items-start max-w-7xl mx-auto z-20 '>  
+        <header className='top-0 p-5 flex justify-between h-28 items-start max-w-7xl mx-auto '>  
             <motion.div
                 initial={{
                     x: -500,
