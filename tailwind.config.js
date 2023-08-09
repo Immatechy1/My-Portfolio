@@ -8,9 +8,8 @@ module.exports = {
     extend: {},
     screens: {
       'sm': '400px',
-      'md': '540px',
+      'md': '600px',
       'lg' : '920px',
-      'xl' : '1180px'
     },
     fontFamily: {
       'special' : 'Stinger Fit Trial, sans-serif',

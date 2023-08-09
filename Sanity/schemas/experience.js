@@ -51,10 +51,4 @@ export default defineType({
       of: [{ type: "string"  }]
     }),
   ],
-  preview: {
-    select: {
-      title: 'name',
-      media: 'image',
-    },
-  },
 })

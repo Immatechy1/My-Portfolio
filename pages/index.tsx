@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { GetStaticProps} from 'next';
 import Head from 'next/head';
 import About from "../components/About";
@@ -25,49 +26,48 @@ type Props = {
 
 const Home  = ({pageInfo, experiences, skills, projects, socials}: Props) => {
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory
-    overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20">
+    <div className="bg-slate-950 text-white h-screen">
       <Head>
-        <title>{pageInfo?.name} - Portfolio</title>
+        <title>{pageInfo?.firstName} - Portfolio</title>
       </Head>
       
-      <Header socials={socials}/>
+      <Header/>
 
-      <section id='hero' className='snap-start'>
+      <section id='hero' className=''>
         <Hero pageInfo={pageInfo}/>
       </section>
 
-      {/* <section  id='about' className='snap-center'>
+      <section  id='about' className='snap-start '>
         <About pageInfo={pageInfo} />
-      </section> */}
+      </section>
 
-      {/* <section  id='experience' className='snap-center'>
+      <section  id='experience' className='snap-center'>
         <WorkExperience experiences={experiences} />
-      </section> */}
+      </section>
 
-      {/* <section  id='skills' className='snap-start'>
+      <section  id='skills' className='snap-start'>
         <Skills skills={skills}/>
-      </section> */}
+      </section>
 
-      {/* <section  id='projects' className='snap-start'>
+      <section  id='projects' className='snap-start bg-black'>
         <Projects projects={projects} />
-      </section> */}
+      </section>
 
-      {/* <section  id='contact' className='snap-start'>
-        <ContactMe />
-      </section> */}
+      <section  id='contact' className='snap-start bg-black'>
+        <ContactMe socials={socials} />
+      </section>
 
-      {/* <Link href="#hero">
-        <footer className='sticky-bottom-5 w-full cursor-pointer'>
-          <div className='flex items-center justify-center'>
-            <img 
-              className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
-              src='https://images.unsplash.com/photo-1664008824754-2eff11fe7a54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60' 
-              alt='' 
-            />
+      <Link href="#hero">
+        <div className='bg-slate-950 flex flex-col text-white p-4 gap-0 items-center  pt-[3rem] pb-[2rem]  justify-center'>
+          <div className='text-[0.9rem] tracking-tight'>A portfolio by</div>
+          <div className='text-[1.2rem] text-[#d44be0] font-semibold  '>IMMA<span className='text-white'>TECHY</span></div> 
+          <div className='text-[0.9rem] tracking-tight'>Developed by Immaculeta Nwokejeme</div>
+          <div className='flex flex-row items-center mt-[3rem] justify-center gap-1'>
+            <Image className='' src='/images/copyright.png' width={20} height={20} alt='copyright' />
+          <div className='text-white text-center p-0 text-[0.8rem]'>Portfolio by Immatechy All rights reserved 2023.</div>
           </div>
-        </footer>
-      </Link> */}
+        </div>
+      </Link>
     </div>
   )
 }

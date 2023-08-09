@@ -1,44 +1,56 @@
+import React, { useState } from 'react'
 import { urlFor } from '@/sanity';
 import { PageInfo } from '@/typings';
-import { motion } from 'framer-motion';
-import React from 'react'
+import 'aos/dist/aos.css'; // Import AOS styles
+import AOS from 'aos';
+import Button from './button/Button';
+
 
 type Props = {
   pageInfo: PageInfo,
 }
  
 export default function About({ pageInfo }: Props) {
-  return (
-    <motion.div
-      initial={{opacity: 0}}
-      whileInView={{ opacity: 1 }}
-      transition={{duration: 1.5,}}
-      className='flex flex-col relative h-screen text-center md:text-left
-        md:flex-row lg:flex-row max-w-7xl px-10 xl:px-20 justify-evenly mx-auto items-center sm:mt-40 md:-mt-20 lg:mt-10 xl:mt-64'>
-        <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
-            About
-        </h3>
-        <motion.img 
-            initial={{
-                x: -200,
-                opacity: 0,
-            }}
-            transition={{
-                duration: 1.2, 
-            }}
-            whileInView={{ opacity: 1,  x: 0 }}
-            viewport={{once: true}}
-            src={urlFor(pageInfo?.profilePic).url()}
-            className='mt-96 sm:mt-40 md:-mt-20 lg:mb-80 xl:-mb-96 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-[250px]
-            md:h-[300px] lg:w-[320px] lg:h-[350px] lg:rounded-lg xl:w-[350px] xl:h-[350px]'
-        />
+  React.useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      offset: 100,
+      delay: 100,
+      once: false,
+    });
+  }, []);
 
-        <div className='space-y-10 px-0 md:px-8 lg:px-10 mt-10 sm:mt-10 md:-mt-24 lg:mb-80 xl:-mb-96 '>
-            <h4 className='text-3xl font-semibold' >Here is a{" "} <span className='underline decoration-[#f7ab0a]/50'>little</span>{" "}background</h4>
-            <p className='text-base'>
-              {pageInfo?.backgroundInformation}
-            </p>
+  return (
+    <div  className='bg-slate-950 mt-[4rem] sm:mt-[4rem] lg:mt-[0rem] pb-[3rem] '>
+    <div data-aos="zoom-in-up" data-aos-duration="800" className='bg-slate-950  flex flex-col relative  text-center md:text-left md:flex-row md:text-left lg:flex-row px-4 md:px-8 lg:px-[3rem] justify-evenly items-center'>
+      
+      <h3 className='uppercase md:absolute md:top-8 lg:mt-[5rem] text-2xl'>
+        About Me
+      </h3>
+      <img data-aos="fade-right" data-aos-duration="1200" 
+          src={urlFor(pageInfo?.profilePic).url()}
+          className='mt-[3rem] sm:mt-[4rem] md:mt-[8rem] lg:mt-[16rem] flex-shrink-0 w-56 h-56 md:w-[300px] md:h-[320px]
+          lg:w-[400px] lg:h-[400px] rounded-full object-cover md:rounded-lg lg:rounded-lg'
+      />
+      <div className='space-y-10 mt-[3rem] sm:mt-[4rem] md:mt-[8rem] lg:mt-[16rem]  md:pl-[2rem] lg:pl-[3rem] '>
+        <p data-aos="fade-up" data-aos-duration="1200" className='text-[0.8rem] lg:text-[1rem]'>
+          {pageInfo?.backgroundInformation}
+        </p>
+      </div>
+    </div>
+
+    <div className='flex flex-col mx-[2rem] w-[84%] sm:w-[74%] lg:w-[40%] mt-[3rem] '>
+      <div className=''>
+        <img className='flex rotate-[270deg] mb-2' src='/images/pin.png' alt='pin' width={50} height={50}  />
+      </div>
+      <div data-aos="fade-right" className='text-[2rem] text-[1.3rem] font-semibold'>Trustworthy, Creative and Dedicated to 
+        <span data-aos="fade-left" className='text-[#d44be0]'> delivering on time</span></div>
+        <div className='w-[8rem] mt-8'>
+          <Button text={'VIEW CV'} isOutline onClick={() => window.open("files/IMMATECHY.pdf")}/>
         </div>
-    </motion.div>
+
+      </div>
+    </div>
   )
 }
