@@ -49,7 +49,6 @@ export default function About({ pageInfo }: Props) {
         <div className='w-[8rem] mt-8'>
           <Button text={'VIEW CV'} isOutline onClick={() => window.open("files/IMMATECHY.pdf")}/>
         </div>
-
       </div>
     </div>
   )
