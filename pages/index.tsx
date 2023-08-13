@@ -26,22 +26,22 @@ type Props = {
 
 const Home  = ({pageInfo, experiences, skills, projects, socials}: Props) => {
   return (
-    <div className="bg-slate-950 text-white h-screen">
+    <div className="bg-[#010514] text-white h-screen">
       <Head>
         <title>{pageInfo?.firstName} - Portfolio</title>
       </Head>
       
       <Header/>
 
-      <section id='hero' className=''>
+      <section id='hero' className='bg-[#010514] '>
         <Hero pageInfo={pageInfo}/>
       </section>
 
-      <section  id='about' className='snap-start '>
+      <section  id='about' className=''>
         <About pageInfo={pageInfo} />
       </section>
 
-      <section  id='experience' className='snap-center'>
+      <section  id='experience' className='bg-[#010514] '>
         <WorkExperience experiences={experiences} />
       </section>
 
@@ -49,18 +49,18 @@ const Home  = ({pageInfo, experiences, skills, projects, socials}: Props) => {
         <Skills skills={skills}/>
       </section>
 
-      <section  id='projects' className='snap-start bg-black'>
+      <section  id='projects' className='bg-[#010514] '>
         <Projects projects={projects} />
       </section>
 
-      <section  id='contact' className='snap-start bg-black'>
+      <section  id='contact' className='bg-[#010514] '>
         <ContactMe socials={socials} />
       </section>
 
       <Link href="#hero">
-        <div className='bg-slate-950 flex flex-col text-white p-4 gap-0 items-center  pt-[3rem] pb-[2rem]  justify-center'>
+        <div className='bg-[#010514] flex flex-col text-white p-4 gap-0 items-center  pt-[3rem] pb-[2rem]  justify-center'>
           <div className='text-[0.9rem] tracking-tight'>A portfolio by</div>
-          <div className='text-[1.2rem] text-[#d44be0] font-semibold  '>IMMA<span className='text-white'>TECHY</span></div> 
+          <div className='text-[1.2rem] text-[#65C23A] font-semibold  '>IMMA<span className='text-white'>TECHY</span></div> 
           <div className='text-[0.9rem] tracking-tight'>Developed by Immaculeta Nwokejeme</div>
           <div className='flex flex-row items-center mt-[3rem] justify-center gap-1'>
             <Image className='' src='/images/copyright.png' width={20} height={20} alt='copyright' />
