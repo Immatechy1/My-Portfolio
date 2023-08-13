@@ -8,7 +8,6 @@ type Props = {};
 
 export default function Header({}: Props) {
     const [open, setOpen] = useState(false);
-    const [toggle, setToggle] = useState(false);
 
     return (
         <header className='bg-[#010514] top-0 p-5 flex justify-between items-start max-w-7xl mx-auto overflow-hidden '>  
@@ -49,9 +48,7 @@ export default function Header({}: Props) {
                 <GiHamburgerMenu
                     className="h-10 w-7 text-[#65C23A] "
                     onClick={() => setOpen(!open)}
-                /> 
-  
-                
+                />  
                          
             </motion.div>
             <div className={`${
@@ -92,7 +89,6 @@ export default function Header({}: Props) {
                 >
                     <Button text={'VIEW CV'} isOutline onClick={() => window.open("/files/IMMATECHY.pdf")}/>
             </motion.div>
-        </header>
-       
+        </header>   
     )
 }

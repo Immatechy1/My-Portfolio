@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Image from 'next/image';
 import { urlFor } from '@/sanity';
 import { PageInfo } from '@/typings';
 import 'aos/dist/aos.css'; // Import AOS styles
@@ -26,10 +27,13 @@ export default function About({ pageInfo }: Props) {
         <h3 className='uppercase md:absolute md:top-8 lg:mt-[5rem] text-2xl'>
           About Me
         </h3>
-        <img data-aos="fade-right" data-aos-duration="1200" 
-            src={urlFor(pageInfo?.profilePic).url()}
-            className='mt-[3rem] sm:mt-[4rem] md:mt-[8rem] lg:mt-[16rem] flex-shrink-0 w-56 h-56 md:w-[300px] md:h-[320px]
-            lg:w-[400px] lg:h-[400px] rounded-full object-cover md:rounded-lg lg:rounded-lg'
+        <Image data-aos="fade-right" data-aos-duration="1200"
+          src={urlFor(pageInfo?.profilePic).url()}
+          className='mt-[3rem] sm:mt-[4rem] md:mt-[8rem] lg:mt-[16rem] flex-shrink-0 w-56 h-56 md:w-[300px] md:h-[320px]
+          lg:w-[400px] lg:h-[400px] rounded-full object-cover md:rounded-lg lg:rounded-lg'
+          alt=""
+          width={560}
+          height={560}
         />
         <div className='space-y-10 mt-[3rem] sm:mt-[4rem] md:mt-[8rem] lg:mt-[16rem]  md:pl-[2rem] lg:pl-[3rem] '>
           <p data-aos="fade-up" data-aos-duration="1200" className='text-[0.8rem] lg:text-[1rem]'>

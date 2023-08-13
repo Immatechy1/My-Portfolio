@@ -1,8 +1,6 @@
 import React from 'react';
-import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/20/solid"
 import { useState, useEffect  } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import Button from '../components/button/Button'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -95,11 +93,7 @@ function ContactMe({ socials }: Props)  {
                     }). then(data => data.json()).then(data => msg2 = data.msg)
                     if(msg2 === 'OK'){
                         setLoading(false)
-                        showToastMessage('Message sent', 'success')
-        
-                        
-                        
-                        
+                        showToastMessage('Message sent', 'success')   
                     }
                     else if(msg2 === 'invalid email'){
                         showToastMessage('invalid email', 'error')
@@ -132,7 +126,7 @@ function ContactMe({ socials }: Props)  {
                 </div>
                 <div data-aos="flip-right" className='pl-[1rem] pr-[1rem] pl-[2rem] break-words max-w-[17rem] pr-[2rem] h-[9.5rem]  flex flex-col gap-4 items-center justify-center bg-[#0f172a]'>
                     <div><Image src='/images/email.png' alt='address' width={40} height={40}/></div>
-                    <div className='text-center text-[0.96rem] max-w-[7rem]  max-w-[100%]  '>immaculoetanwokejeme@gmail.com</div>
+                    <div className='text-center text-[0.96rem] max-w-[7rem]  max-w-[100%]  '>immaculetanwokejeme@gmail.com</div>
                 </div>
                 <div data-aos="flip-right" className='pl-[1rem] pr-[1rem] pl-[2rem] max-w-[17rem] pr-[2rem] h-[9.5rem]  flex flex-col gap-4 items-center justify-center bg-[#0f172a]'>
                     <div><Image src='/images/telephone.png' alt='address' width={40} height={40}/></div>
@@ -180,7 +174,6 @@ function ContactMe({ socials }: Props)  {
                              secondaryColor="lightgray"
                              strokeWidth={6}
                              strokeWidthSecondary={6}
-              
                              />
                              <div>SENDING</div>
                       </div>
