@@ -11,7 +11,7 @@ export default function Header({}: Props) {
     const [toggle, setToggle] = useState(false);
 
     return (
-        <header className='bg-slate-950 top-0 p-5 flex justify-between items-start max-w-7xl mx-auto overflow-hidden '>  
+        <header className='bg-[#010514] top-0 p-5 flex justify-between items-start max-w-7xl mx-auto overflow-hidden '>  
             <Link className='flex cursor-pointer mt-[0.8rem] ' href='/'>
                 <motion.div 
                      initial={{
@@ -27,7 +27,7 @@ export default function Header({}: Props) {
                     transition={{
                         duration: 1.5,
                     }}
-                    className='text-[1.4rem] text-[#d44be0] font-semibold mdm:ml-[1rem] '>IMMA<span className='text-white'>TECHY</span>
+                    className='text-[1.4rem] text-[#65C23A] font-semibold mdm:ml-[1rem] '>IMMA<span className='text-white'>TECHY</span>
                 </motion.div>
             </Link>
                 
@@ -47,7 +47,7 @@ export default function Header({}: Props) {
                 }}
                 className='lg:hidden text-white cursor-pointer mt-2.5 '>
                 <GiHamburgerMenu
-                    className="h-10 w-7 text-[#d44be0] "
+                    className="h-10 w-7 text-[#65C23A] "
                     onClick={() => setOpen(!open)}
                 /> 
   

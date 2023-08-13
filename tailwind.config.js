@@ -16,5 +16,8 @@ module.exports = {
       'special1' : 'Heading Now Trial, sans-serif'
     }
   },
+  variants: {
+    scrollbar: ['rounded'],
+  },
   plugins: [],
 };
