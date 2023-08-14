@@ -50,7 +50,7 @@ const Home  = ({pageInfo, experiences, skills, projects, socials}: Props) => {
       </section>
 
       <section  id='projects' className='bg-[#010514] '>
-        <Projects projects={projects} />
+        <Projects projects={projects}/>
       </section>
 
       <section  id='contact' className='bg-[#010514] '>
