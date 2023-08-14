@@ -6,11 +6,10 @@ import Image from 'next/image';
 
 type Props = {
     projects: Project[]
-    isOutline?: boolean,
     onClick?: (e?: React.SyntheticEvent<EventTarget>) => void;
 };
 
-function Projects({projects, isOutline, onClick}: Props) {
+function Projects({projects, onClick}: Props) {
   return (
     <div className='bg-[#010514] relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0'>
         <h3 className='absolute top-24 uppercase text-2xl'>

@@ -1,6 +1,5 @@
 import React from 'react'
 import Skill from "./Skil"
-import { motion } from 'framer-motion';
 import { Skill as SkillType } from '@/typings';
 
 type Props = {

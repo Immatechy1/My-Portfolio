@@ -1,7 +1,7 @@
 import React from 'react';
 import Aos from 'aos';
 import Image from 'next/image';
-import { MotionConfig, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Experience } from '@/typings';
 import { urlFor } from '@/sanity';
 
@@ -68,12 +68,10 @@ export default function ExperienceCard({experience}: Props) {
                     : new Date(experience.dateEnded).toDateString()}
                 </p>
                 
-                
                 <ul className='list-disc space-y-4 px-[1.7rem] md:px-[4rem] text-base md:text-xl max-h-96 w-1/14 pb-10 overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-800'>
                 {experience.points?.map((point, i) => (
                         <li key={i}>{point}</li>
                 ))}
-
                 </ul>
             </div> 
         </article>

@@ -33,7 +33,7 @@ const Home  = ({pageInfo, experiences, skills, projects, socials}: Props) => {
       
       <Header/>
 
-      <section id='hero' className='bg-[#010514] '>
+      <section id='hero' className='bg-[#010514]'>
         <Hero pageInfo={pageInfo}/>
       </section>
 

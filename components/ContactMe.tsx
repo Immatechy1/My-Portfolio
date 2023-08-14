@@ -120,25 +120,25 @@ function ContactMe({ socials }: Props)  {
             </div>
             <div className='flex flex-col items-center md:flex-row mt-[2rem] gap-[2rem] p-4 md:items-start justify-center'>
             <div className='md:flex grid grid-cols-2 md:flex-col gap-4'>
-                <div data-aos="flip-right" className='pl-[1rem] pr-[1rem] pl-[2rem] max-w-[17rem] pr-[2rem] h-[9.5rem]  flex flex-col gap-4 items-center justify-center bg-[#0f172a]'>
+                <div data-aos="flip-right"  data-aos-duration="1200" className='pl-[1rem] pr-[1rem] pl-[2rem] max-w-[17rem] pr-[2rem] h-[9.5rem]  flex flex-col gap-4 items-center justify-center bg-[#0f172a]'>
                     <div><Image src='/images/location.png' alt='address' width={40} height={40}/></div>
                     <div className='text-center text-[0.96rem] '>Remote</div>
                 </div>
-                <div data-aos="flip-right" className='pl-[1rem] pr-[1rem] pl-[2rem] break-words max-w-[17rem] pr-[2rem] h-[9.5rem]  flex flex-col gap-4 items-center justify-center bg-[#0f172a]'>
+                <div data-aos="flip-right"  data-aos-duration="1200" className='pl-[1rem] pr-[1rem] pl-[2rem] break-words max-w-[17rem] pr-[2rem] h-[9.5rem]  flex flex-col gap-4 items-center justify-center bg-[#0f172a]'>
                     <div><Image src='/images/email.png' alt='address' width={40} height={40}/></div>
                     <div className='text-center text-[0.96rem] max-w-[7rem]  max-w-[100%]  '>immaculetanwokejeme@gmail.com</div>
                 </div>
-                <div data-aos="flip-right" className='pl-[1rem] pr-[1rem] pl-[2rem] max-w-[17rem] pr-[2rem] h-[9.5rem]  flex flex-col gap-4 items-center justify-center bg-[#0f172a]'>
+                <div data-aos="flip-right"  data-aos-duration="1200" className='pl-[1rem] pr-[1rem] pl-[2rem] max-w-[17rem] pr-[2rem] h-[9.5rem]  flex flex-col gap-4 items-center justify-center bg-[#0f172a]'>
                     <div><Image src='/images/telephone.png' alt='address' width={40} height={40}/></div>
                     <div className='text-center text-[0.96rem]  '>+234 8032777946</div>
                 </div>
-                <div data-aos="flip-right" className='pl-[1rem] pr-[1rem] pl-[2rem] max-w-[17rem] pr-[2rem] h-[9.5rem]  flex flex-col gap-4 items-center justify-center bg-[#0f172a]'>
+                <div data-aos="flip-right"  data-aos-duration="1200" className='pl-[1rem] pr-[1rem] pl-[2rem] max-w-[17rem] pr-[2rem] h-[9.5rem]  flex flex-col gap-4 items-center justify-center bg-[#0f172a]'>
                     <div><Image src='/images/verified.png' alt='address' width={40} height={40}/></div>
                     <div className='text-center text-[0.96rem] '>Freelance available</div>
                 </div>
             </div>
                 
-            <div data-aos="slide-up" className='flex flex-col items-center gap-4 md:gap-[3rem] md:pt-[3rem] h-[100%] w-[100%] md:w-[70%] max-w-[35rem] bg-[#0f172a] p-[1.1rem] p-[2rem] '>
+            <div data-aos="slide-up"  data-aos-duration="1200" className='flex flex-col items-center gap-4 md:gap-[3rem] md:pt-[3rem] h-[100%] w-[100%] md:w-[70%] max-w-[35rem] bg-[#0f172a] p-[1.1rem] p-[2rem] '>
                 <div className='flex flex-row w-[100%] gap-[1rem] flex-row'>
                     <input className='text-[1rem] p-[0.8rem] w-[100%] w-[50%] bg-[#010514] outline-none focus:outline-none' type="text" placeholder='Enter your name'
                         value={name}

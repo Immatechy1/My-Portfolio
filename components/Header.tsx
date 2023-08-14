@@ -4,18 +4,11 @@ import { motion } from "framer-motion"
 import Link from 'next/link';
 import Button from './button/Button';
 
-export interface Props {}
 
-interface Links {
-    name: string,
-    isButton?: boolean,
-    onClick?: (e?: React.SyntheticEvent<EventTarget>) => void;
-}
-
-export default function Header({}: Props) {
+export default function Header() {
     const [open] = useState(false);
     return (
-        <header className='bg-[#010514] p-5 flex  items-start overflow-hidden justify-between  max-w-7xl mx-auto '>  
+        <header className='bg-[#010514] px-6 lg:px-6 md:px-6 py-5 flex items-start justify-between  max-w-7xl mx-auto '>  
             <Link className='flex cursor-pointer mt-[0.8rem] lg:mt-[1.4rem]' href='/'>
                 <motion.div 
                      initial={{
@@ -31,7 +24,7 @@ export default function Header({}: Props) {
                     transition={{
                         duration: 1.5,
                     }}
-                    className='text-[1.4rem] text-[#65C23A] font-semibold'>IMMA<span className='text-white'>TECHY</span>
+                    className='text-[1.4rem] text-[#65C23A] font-bold'>IMMA<span className='text-white'>TECHY</span>
                 </motion.div>
             </Link>
 
@@ -83,7 +76,7 @@ export default function Header({}: Props) {
 
                     <div className={`${
                     open ? "block" : "hidden"
-                    }lg:block grid lg:flex lg:mt-5 md:mt-20  space-y-8 font-medium`}
+                    }lg:block grid lg:flex lg:mt-5 md:mt-20 mt-[4rem]  space-y-8 font-medium`}
                     >     
                     <Link href="#about" >
                         <button className='heroButton'>About Me</button>
@@ -120,7 +113,7 @@ export default function Header({}: Props) {
                 }}
                 className={`${
                     open ? "block" : "hidden"
-                    } lg:block flex flex-row lg:mt-5 mt-44 text-gray-300 cursor-pointer`}
+                    } lg:block flex flex-row lg:mt-5 mt-44 fovt-bold text-gray-300 cursor-pointer`}
                 >
                     <Button text={'VIEW CV'} isOutline onClick={() => window.open("/files/IMMATECHY.pdf")}/>
             </motion.div>
