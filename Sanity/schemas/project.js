@@ -11,8 +11,9 @@ export default defineType({
       description: 'Title of the project',
       type: 'string',
     }),
+
     defineField({
-      name: 'image',
+      name: 'projectImage',
       title: 'Image',
       type: 'image',
       options: {
@@ -25,15 +26,15 @@ export default defineType({
       type: 'text',
     }),
     defineField({
-      name: 'technologies',
-        title: 'Technologies',
-        type: 'array',
-        of: [{ type: "reference", to: {type: "block" }}]
+      name: 'linkToCode',
+      title: 'LinkToCode',
+      type: 'url',
     }),
     defineField({
-      name: 'linkToBuild',
-      title: 'LinkToBuild',
+      name: 'linkToDemo',
+      title: 'LinkToDemo',
       type: 'url',
+
     }),
   ],
 })

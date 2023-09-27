@@ -2,8 +2,8 @@ import React from 'react';
 import Aos from 'aos';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Experience } from '@/typings';
 import { urlFor } from '@/sanity';
+import { Experience } from '@/typings';
 
 type Props = {
     experience: Experience;
@@ -21,7 +21,7 @@ export default function ExperienceCard({experience}: Props) {
       }, []);
     return (
         <article data-aos="flip-left" data-aos-duration="1500" data-aos-easing="linear" className='flex flex-col rounded-lg  items-center space-y-7 flex-shrink-0 mb-[5rem]
-            w-[320px] sm:w-[350px] md:w-[650px] lg:w-[1100px] snap-center bg-[#1d1836] lg-3 lg:pb-10 
+            w-[320px] sm:w-[350px] md:w-[650px] lg:w-[1100px] snap-center bg-[#0f172a] lg-3 lg:pb-10 
             hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 
             overflow-hidden '>
                 <motion.div

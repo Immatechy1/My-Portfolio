@@ -1,8 +1,9 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Project } from '@/typings';
 import { urlFor } from '@/sanity';
 import Image from 'next/image';
+import Button from './button/Button';
+import Aos from 'aos';
 
 type Props = {
     projects: Project[]
@@ -10,64 +11,54 @@ type Props = {
 };
 
 function Projects({projects, onClick}: Props) {
+    React.useEffect(() => {
+        Aos.init({
+          duration: 100,
+          easing: 'ease-in-out',
+          offset: 100,
+          delay: 100,
+          once: false,
+        });
+    }, []);
   return (
-    <div className='bg-[#010514] relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0'>
-        <h3 className='absolute top-24 uppercase text-2xl'>
-           Projects 
+    <div data-aos="fade-up" data-aos-duration="500" className='bg-[#010514] w-[100%] pb-[4rem] md:pb-[6rem] lg:pb-[8rem]'>
+        <h3 className='uppercase text-2xl text-center'>
+            Projects 
         </h3>
-
-        <div className='relative w-full flex overflow-x-scroll overflow-y-hidden h-screen snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f4ab0a]/80 mt-20 '>
+        <div className=''>
             {projects?.map((project, i) => (
-                <div key={project._id} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center px-20 md:px-44 '>
-                    <div>
-                    <motion.div
-                     initial={{
-                        y: -300,
-                        opacity: 0,
-                    }}
-                    transition={{ duration: 1.2 }}
-                    whileInView={{ opacity: 1, y:0 }}
-                    viewport={{ once: false }}
-                    >
-                    <a href={project?.linkToBuild} onClick={onClick} className="link cursor-pointer hover:scale-110 duration-500 p-[0.5rem] flex  rounded  border-4 border-[#0f172a]"> 
-                        {project.image && (
-                        <Image className='w-[28rem] rounded'
-                            src={urlFor(project?.image).url()}
-                            alt=""
-                            width={760}
-                            height={560}
-                        />
-                        )}
-                    </a>
-                    </motion.div>
+            <div key={project._id} data-aos="fade-left" data-aos-duration="500" className='grid lg:flex md:px-[4rem]  mt-[1.8rem] md:mt-[8rem] lg:mt-[8rem]'>
+                <div className='lg:pr-[5rem] order-last lg:order-none px-[1.5rem] md:px-[1rem] lg:px:0'>
+                    <h1 className='text-2xl md:text-3xl lg:text-3xl mt-[4rem] lg:mt-[0] font-bold '> {project?.title}</h1>
+                    <h1 className='tracking-wide text-base lg:leading-10 leading-7 md:text-lg lg:text-lg mt-[1rem] md:mt-[1.5rem] lg:mt-[2rem]'> {project?.summary}</h1>
+                    <div className='flex py-[2rem] space-x-8 lg:space-x-20   '>
+                        
+                        <a href={project?.linkToDemo} onClick={onClick} className="link cursor-pointer hover:scale-110 duration-500 lg:w-[8rem] border-2 rounded border-[#65C23A] "> 
+                            <Button text={'View Demo '}  isOutline />
+                        </a>
+                        <a href={project?.linkToCode} onClick={onClick} className="link cursor-pointer hover:scale-110 duration-500 lg:w-[8rem] border-2 rounded  border-[#65C23A]"> 
+                            <Button text={'Source code '} isOutline />
+                        </a>                 
                     </div>
-                    
-                    <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
-                        <h4 className='text-4xl font-semibold text-center'>
-                            <span className='underline decoration-[#f7ab0a]/50'>
-                                case study {i+1} of {projects.length}:
-                            </span>{" "}
-                            {project?.title}
-                        </h4>
-                        <div className='flex items-center space-x-2 justify-center'>
-                            {project?.technologies?.map(technology =>(
-                            <Image
-                                className='h-10 w-10'
-                                key={technology._id} 
-                                src={urlFor(technology.image).url()} 
-                                alt=""/>
-                            ))}
-                        </div>
-                        <p className='text-lg text-center md:text-left'>
-                           {project?.summary}
-                        </p>
-                    </div>
+                </div>
+
+                <div className='relative mt-[3rem] md:mt-[0] lg:mt-[1rem]  px-[2rem] px-[1.5rem] md:px-[1rem] lg:px:0'>
+                    {project.projectImage && (
+                    <Image className='lg:w-[150rem] md:w-[100rem] h-auto max-w-lg' 
+                        src={urlFor(project?.projectImage).url()} 
+                        alt=""
+                        width={400}
+                        height={400}
+                    />
+                    )}
                 </div>   
-            ))}
-        </div>
-        {/* <div className='w-full absolute top-[30%] bg-[#f7ab0a]/10 left-0 h-[500px]
-        -skew-y-12' /> */}
+            </div>
+            
+        ))}
+         </div>
+         
     </div>
+   
   )
 }
 
