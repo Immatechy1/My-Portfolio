@@ -36,12 +36,12 @@ export default function Hero({pageInfo}: Props) {
                 height={560}
             />
             </div>
-            <div className='absolute top-[5rem] md:top-[7.5rem] lg:top-[11.2rem] right-[0.8rem] md:right-[5rem] lg:right-[6.2rem]'>
-                <Image className='z-[-1] w-[36%] md:w-[46%] lg:w-[48%] ' 
+            <div className='absolute top-[5rem] md:top-[7.5rem] lg:top-[11.2rem] right-[3.8rem] md:right-[7rem] lg:right-[11.2rem]'>
+                <Image className='z-[-1] w-[2rem] md:w-[2rem] lg:w-[2.5rem] ' 
                     src={urlFor(pageInfo?.blockImage).url()}
                     alt=""
-                    width={400}
-                    height={50}
+                    width={0}
+                    height={0}
                 />
             </div>
         </div>  
