@@ -58,7 +58,7 @@ const Home  = ({pageInfo, experiences, skills, projects, socials}: Props) => {
       </section>
 
       <Link href="#hero">
-        <div className='bg-[#010514] flex flex-col text-white p-4 gap-0 items-center  pt-[3rem] pb-[2rem]  justify-center'>
+        <div className='bg-[#010514] flex flex-col text-white p-4 gap-0 items-center  mt-[-1rem] pb-[2rem]  justify-center'>
           <div className='text-[0.9rem] tracking-tight'>A portfolio by</div>
           <div className='text-[1.2rem] text-[#65C23A] font-semibold  '>IMMA<span className='text-white'>TECHY</span></div> 
           <div className='text-[0.9rem] tracking-tight'>Developed by Immaculeta Nwokejeme</div>
