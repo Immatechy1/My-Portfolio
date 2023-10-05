@@ -8,7 +8,7 @@ import Button from './button/Button';
 export default function Header() {
     const [open] = useState(false);
     return (
-        <header className='bg-[#010514] px-6 lg:px-6 md:px-6 py-5 flex items-start justify-between  max-w-7xl mx-auto '>  
+        <header className='bg-[#010514] overflow-hidden px-6 lg:px-6 md:px-6 py-5 flex items-start justify-between  max-w-7xl mx-auto '>  
             <Link className='flex cursor-pointer mt-[0.8rem] lg:mt-[1.4rem]' href='/'>
                 <motion.div 
                      initial={{

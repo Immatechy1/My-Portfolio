@@ -34,14 +34,14 @@ export default function ExperienceCard({experience}: Props) {
                 viewport={{ once: false }}
                 >
                     {experience.companyImage && (
-                <Image
-                    className='w-28 h-28 rounded-full md:w-[120px] md:h-[120px] lg:w-[120px] lg:h-[120px] object-cover
-                    object-center mt-[2rem] md:mt-[4rem] '
-                    src={urlFor(experience?.companyImage).url()}
-                    alt=""
-                    width={560}
-                    height={560}
-                />
+                    <Image
+                        className='w-28 h-28 rounded-full md:w-[120px] md:h-[120px] lg:w-[120px] lg:h-[120px] object-cover
+                        object-center mt-[2rem] md:mt-[4rem] '
+                        src={urlFor(experience?.companyImage).url()}
+                        alt=""
+                        width={560}
+                        height={560}
+                    />
                 )}
                 </motion.div>
             

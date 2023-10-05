@@ -9,8 +9,8 @@ type Props = {
 function WorkExperience({experiences}: Props) {
   return (
     <div className='bg-[#010514] flex relative overflow-hidden px-6 sm:px-4 flex-col 
-      max-w-full sm:px-12 justify-evenly mx-auto'>
-      <h3 className='text-center mt-[5rem] md:mt-[7rem] uppercase text-2xl'>   
+      max-w-full sm:px-12 justify-evenly mx-auto mt-[-1rem]'>
+      <h3 className='text-center mt-[6rem] md:mt-[7rem] uppercase text-2xl'>   
         Experience
       </h3>
 

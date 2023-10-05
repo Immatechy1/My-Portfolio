@@ -110,7 +110,7 @@ function ContactMe({ socials }: Props)  {
        } 
 
        return (
-        <div  className='bg-[#010514] text-white pt-[4rem]  pb-[3rem] '>
+        <div  className='bg-[#010514] text-white mt-[-1rem]  pb-[3rem] '>
             <div className='max-w-[10rem]'>
                 <ToastContainer />
             </div>
