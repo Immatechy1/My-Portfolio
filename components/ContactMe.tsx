@@ -5,10 +5,10 @@ import Button from '../components/button/Button'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {Oval} from 'react-loader-spinner'
-import { Social } from '@/typings';
 import { SocialIcon } from 'react-social-icons';
 import 'aos/dist/aos.css'; // Import AOS styles
 import AOS from 'aos';
+import { Social } from '@/typings';
 
 
 const showToastMessage = (message: string, type: string) => {

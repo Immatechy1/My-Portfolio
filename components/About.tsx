@@ -3,8 +3,8 @@ import Image from 'next/image';
 import 'aos/dist/aos.css'; // Import AOS styles
 import AOS from 'aos';
 import { urlFor } from '@/sanity';
-import { PageInfo } from '@/typings';
 import Button from './button/Button';
+import { PageInfo } from '@/typings';
 
 type Props = {
   pageInfo: PageInfo,
@@ -49,7 +49,7 @@ export default function About({ pageInfo }: Props) {
         </div>
         <div  className='text-[2rem] text-[1.3rem] font-semibold'>Trustworthy, Creative and Dedicated to 
           <span className='text-[#65C23A]'> delivering on time</span></div>
-          <div className='w-[8rem] mt-8'>
+          <div className='w-[8rem] mt-8 border-[#65C23A]'>
             <Button text={'VIEW CV'} isOutline onClick={() => window.open("files/IMMATECHY.pdf")}
           />
         </div>
