@@ -42,7 +42,6 @@ export default function About({ pageInfo }: Props) {
             </p>
           </div>
         </div>`
-
         <div data-aos="fade-right" data-aos-duration="1200" className='flex flex-col mx-[2rem] w-[84%] sm:w-[74%] lg:w-[40%] mt-[3rem] '>
           <div className=''>
             <Image className='flex rotate-[270deg] mb-2' src='/images/pin.png' 
