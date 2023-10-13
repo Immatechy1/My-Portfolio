@@ -110,96 +110,97 @@ function ContactMe({ socials }: Props)  {
        } 
 
        return (
-        <div  className='bg-[#010514] text-white mt-[-1rem]  pb-[3rem] '>
-            <div className='max-w-[10rem]'>
-                <ToastContainer />
-            </div>
-            <div data-aos="zoom-in-down" className='text-[2.8rem] text-center p-4 ml-[2rem]   text-white text-[2rem] font-semibold tracking-tighter'>
-                Contact Me
-                <div className='text-[#65C23A] mt-[-0.5rem] tracking-normal text-[1.1rem]'>get in touch with me</div>
-            </div>
-            <div className='flex flex-col items-center md:flex-row mt-[2rem] gap-[2rem] p-4 md:items-start justify-center'>
-            <div className='md:flex grid grid-cols-2 md:flex-col gap-4'>
-                <div data-aos="flip-right"  data-aos-duration="1200" className='pl-[1rem] pr-[1rem] pl-[2rem] max-w-[17rem] pr-[2rem] h-[9.5rem]  flex flex-col gap-4 items-center justify-center bg-[#0f172a]'>
-                    <div><Image src='/images/location.png' alt='address' width={40} height={40}/></div>
-                    <div className='text-center text-[0.96rem] '>Remote</div>
+       
+            <div  className='bg-[#010514] overflow-hidden text-white mt-[-1rem]  pb-[3rem] '>
+                <div className='max-w-[10rem]'>
+                    <ToastContainer />
                 </div>
-                <div data-aos="flip-right"  data-aos-duration="1200" className='pl-[1rem] pr-[1rem] pl-[2rem] break-words max-w-[17rem] pr-[2rem] h-[9.5rem]  flex flex-col gap-4 items-center justify-center bg-[#0f172a]'>
-                    <div><Image src='/images/email.png' alt='address' width={40} height={40}/></div>
-                    <div className='text-center text-[0.96rem] max-w-[7rem]  max-w-[100%]  '>immaculetanwokejeme@gmail.com</div>
+                <div data-aos="zoom-in-down" className='text-[2.8rem] text-center p-4 ml-[2rem]   text-white text-[2rem] font-semibold tracking-tighter'>
+                    Contact Me
+                    <div className='text-[#65C23A] mt-[-0.5rem] tracking-normal text-[1.1rem]'>get in touch with me</div>
                 </div>
-                <div data-aos="flip-right"  data-aos-duration="1200" className='pl-[1rem] pr-[1rem] pl-[2rem] max-w-[17rem] pr-[2rem] h-[9.5rem]  flex flex-col gap-4 items-center justify-center bg-[#0f172a]'>
-                    <div><Image src='/images/telephone.png' alt='address' width={40} height={40}/></div>
-                    <div className='text-center text-[0.96rem]  '>+234 8032777946</div>
-                </div>
-                <div data-aos="flip-right"  data-aos-duration="1200" className='pl-[1rem] pr-[1rem] pl-[2rem] max-w-[17rem] pr-[2rem] h-[9.5rem]  flex flex-col gap-4 items-center justify-center bg-[#0f172a]'>
-                    <div><Image src='/images/verified.png' alt='address' width={40} height={40}/></div>
-                    <div className='text-center text-[0.96rem] '>Freelance available</div>
-                </div>
-            </div>
-                
-            <div data-aos="slide-up"  data-aos-duration="1200" className='flex flex-col items-center gap-4 md:gap-[3rem] md:pt-[3rem] h-[100%] w-[100%] md:w-[70%] max-w-[35rem] bg-[#0f172a] p-[1.1rem] p-[2rem] '>
-                <div className='flex flex-row w-[100%] gap-[1rem] flex-row'>
-                    <input className='text-[1rem] p-[0.8rem] w-[100%] w-[50%] bg-[#010514] outline-none focus:outline-none' type="text" placeholder='Enter your name'
-                        value={name}
-                        onChange={(e)=>{
-                            setName(e.target.value)
-                        }}
-                    />
-                    <input className='text-[1rem] p-[0.8rem] w-[100%] w-[50%] bg-[#010514] outline-none focus:outline-none' type="text" placeholder='Enter your email'
-                        value={email}
-                        onChange={(e)=>{
-                            setEmail(e.target.value)
-                        }}
-                    />
-                </div>
-                <div className='h-[20rem] md:h-[24.52rem] w-[100%]  break-words'>
-                    <textarea className='text-[1rem] p-[0.8rem] w-[100%] h-[100%] bg-[#010514] outline-none focus:outline-none' placeholder='Enter your message'
-                        value={message}
-                        onChange={(e)=>{
-                            setMessage(e.target.value)
-                        }}
-                    ></textarea>
-                </div>
-                <Button text={loading?
-                        <div className='flex flex-row items-center'>
-                        <Oval
-                             height={18}
-                             width={18}
-                             color="#ffffff"
-                             wrapperStyle={{}}
-                             wrapperClass=""
-                             visible={true}
-                             ariaLabel='oval-loading'
-                             secondaryColor="lightgray"
-                             strokeWidth={6}
-                             strokeWidthSecondary={6}
-                             />
-                             <div>SENDING</div>
-                      </div>
-                        : 'SEND MESSAGE'} onClick={handleSendMessage} />
-            </div>
-
-        </div>
-    
-        <div className='mt-[5rem] flex flex-col gap-5 items-center justify-center'>
-            <div className='text-[#65C23A] font-semibold text-lg'>Connect with me on social media</div>
-            <div className='flex flex-row'>
-                <div className='cursor-pointer sc hover:scale-125 duration-500 '/>
-                    {socials.map((social) => (
-                        <SocialIcon
-                            key={social._id}
-                            url={social.url}
-                            fgColor='white'
-                            bgColor='transparent'
-                        />
-                    ))}
+                <div className='flex flex-col items-center md:flex-row mt-[2rem] gap-[2rem] p-4 md:items-start justify-center'>
+                <div className='md:flex grid grid-cols-2 md:flex-col gap-4'>
+                    <div data-aos="flip-right"  data-aos-duration="1200" className='pl-[1rem] pr-[1rem] pl-[2rem] max-w-[17rem] pr-[2rem] h-[9.5rem]  flex flex-col gap-4 items-center justify-center bg-[#0f172a]'>
+                        <div><Image src='/images/location.png' alt='address' width={40} height={40}/></div>
+                        <div className='text-center text-[0.96rem] '>Remote</div>
                     </div>
-                
+                    <div data-aos="flip-right"  data-aos-duration="1200" className='pl-[1rem] pr-[1rem] pl-[2rem] break-words max-w-[17rem] pr-[2rem] h-[9.5rem]  flex flex-col gap-4 items-center justify-center bg-[#0f172a]'>
+                        <div><Image src='/images/email.png' alt='address' width={40} height={40}/></div>
+                        <div className='text-center text-[0.96rem] max-w-[7rem]  max-w-[100%] '>immaculetanwokejeme@gmail.com</div>
+                    </div>
+                    <div data-aos="flip-right"  data-aos-duration="1200" className='pl-[1rem] pr-[1rem] pl-[2rem] max-w-[17rem] pr-[2rem] h-[9.5rem]  flex flex-col gap-4 items-center justify-center bg-[#0f172a]'>
+                        <div><Image src='/images/telephone.png' alt='address' width={40} height={40}/></div>
+                        <div className='text-center text-[0.96rem]  '>+234 8032777946</div>
+                    </div>
+                    <div data-aos="flip-right"  data-aos-duration="1200" className='pl-[1rem] pr-[1rem] pl-[2rem] max-w-[17rem] pr-[2rem] h-[9.5rem]  flex flex-col gap-4 items-center justify-center bg-[#0f172a]'>
+                        <div><Image src='/images/verified.png' alt='address' width={40} height={40}/></div>
+                        <div className='text-center text-[0.96rem] '>Freelance available</div>
+                    </div>
+                </div>
+                    
+                <div data-aos="slide-up"  data-aos-duration="1200" className='flex flex-col items-center gap-4 md:gap-[3rem] md:pt-[3rem] h-[100%] w-[100%] md:w-[70%] max-w-[35rem] bg-[#0f172a] p-[1.1rem] p-[2rem] '>
+                    <div className='flex flex-row w-[100%] gap-[1rem] flex-row'>
+                        <input className='text-[1rem] p-[0.8rem] w-[100%] w-[50%] bg-[#010514] outline-none focus:outline-none' type="text" placeholder='Enter your name'
+                            value={name}
+                            onChange={(e)=>{
+                                setName(e.target.value)
+                            }}
+                        />
+                        <input className='text-[1rem] p-[0.8rem] w-[100%] w-[50%] bg-[#010514] outline-none focus:outline-none' type="text" placeholder='Enter your email'
+                            value={email}
+                            onChange={(e)=>{
+                                setEmail(e.target.value)
+                            }}
+                        />
+                    </div>
+                    <div className='h-[20rem] md:h-[24.52rem] w-[100%]  break-words'>
+                        <textarea className='text-[1rem] p-[0.8rem] w-[100%] h-[100%] bg-[#010514] outline-none focus:outline-none' placeholder='Enter your message'
+                            value={message}
+                            onChange={(e)=>{
+                                setMessage(e.target.value)
+                            }}
+                        ></textarea>
+                    </div>
+                    <Button text={loading?
+                            <div className='flex flex-row items-center'>
+                            <Oval
+                                height={18}
+                                width={18}
+                                color="#ffffff"
+                                wrapperStyle={{}}
+                                wrapperClass=""
+                                visible={true}
+                                ariaLabel='oval-loading'
+                                secondaryColor="lightgray"
+                                strokeWidth={6}
+                                strokeWidthSecondary={6}
+                                />
+                                <div>SENDING</div>
+                        </div>
+                            : 'SEND MESSAGE'} onClick={handleSendMessage} />
+                </div>
+
             </div>
-        </div>
-     
-      )
+        
+            <div className='mt-[5rem] flex flex-col gap-5 items-center justify-center'>
+                <div className='text-[#65C23A] font-semibold text-lg'>Connect with me on social media</div>
+                <div className='flex flex-row'>
+                    <div className='cursor-pointer sc hover:scale-125 duration-500 '/>
+                        {socials.map((social) => (
+                            <SocialIcon
+                                key={social._id}
+                                url={social.url}
+                                fgColor='white'
+                                bgColor='transparent'
+                            />
+                        ))}
+                        </div>
+                    
+                </div>
+            </div>
+        
+    )
 }
 
 
