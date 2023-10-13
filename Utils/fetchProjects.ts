@@ -19,10 +19,9 @@ import { groq } from "next-sanity";
 
 export const fetchProjects = async () => {
   const query = groq`
-*[_type=="projects"]{
+  *[_type == "project"] {
     ...,
-    vendors->{...,title,logo,description},
-    categories[]->{slug,title},
+    technologies[]  
   }
 `;
   const res = await sanityClient.fetch(query);
