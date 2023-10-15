@@ -12,12 +12,8 @@ import { groq } from "next-sanity";
 // }
 
 export const fetchSocial = async () => {
-    const query = groq`
-  *[_type=="socials"]{
-      ...,
-      vendors->{...,title,logo,description},
-      categories[]->{slug,title},
-    }
+  const query = groq`
+    *[_type == "social"]
   `;
     const res = await sanityClient.fetch(query);
     return res;

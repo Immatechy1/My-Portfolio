@@ -1,14 +1,21 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { GiCancel, GiHamburgerMenu } from "react-icons/gi";
+import {FaTimes,FaPause,FaPlay,FaEquals} from 'react-icons/fa';
 import { motion } from "framer-motion"
 import Link from 'next/link';
 import Button from './button/Button';
 
-
-export default function Header() {
+interface HeaderProps {
+    play: any;
+    pause: any;
+    playing: any;
+}
+  
+export default function Header({playing, pause, play}: HeaderProps) {
     const [open] = useState(false);
+   
     return (
-        <header className='bg-[#010514] overflow-hidden px-6 lg:px-6 md:px-6 py-5 flex items-start justify-between  max-w-7xl mx-auto '>  
+        <header className='bg-[#010514] overflow-hidden px-6 lg:px-4 md:px-6 py-5 flex items-start justify-between  max-w-7xl mx-auto '>  
             <Link className='flex cursor-pointer mt-[0.8rem] lg:mt-[1.4rem]' href='/'>
                 <motion.div 
                      initial={{
@@ -24,7 +31,10 @@ export default function Header() {
                     transition={{
                         duration: 1.5,
                     }}
-                    className='text-[1.4rem] text-[#65C23A] font-bold'>IMMA<span className='text-white'>TECHY</span>
+                    className='text-[1.4rem] text-[#65C23A] flex font-bold '>IMMA<span className='text-white'>TECHY</span> 
+                    <button onClick={playing ? pause : play} className='mt-[-0.1rem] relative text-white ml-2 bg-[#65C23A] opacity-600 p-2 rounded-full shadow-md animate-pulse'>
+                        {playing ? <FaPause /> : <FaPlay />}
+                    </button>
                 </motion.div>
             </Link>
 
@@ -113,7 +123,7 @@ export default function Header() {
                 }}
                 className={`${
                     open ? "block" : "hidden"
-                    } lg:block flex flex-row lg:mt-5 mt-44 fovt-bold text-gray-300 cursor-pointer`}
+                    } lg:block flex flex-row lg:mt-5 mt-44 fovt-bold text-gray-300 cursor-pointer hover:bg-[#65C23A] `}
                 >
                     <Button text={'VIEW CV'} isOutline onClick={() => window.open("/files/IMMATECHY.pdf")}/>
             </motion.div>

@@ -18,10 +18,9 @@ import { sanityClient } from "@/sanity";
 
 export const fetchExperiences = async () => {
   const query = groq`
-*[_type=="experience"]{
+  *[_type == "experience"] {
     ...,
-    vendors->{...,title,logo,description},
-    categories[]->{slug,title},
+    technologies[]  
   }
 `;
   const res = await sanityClient.fetch(query);
