@@ -31,13 +31,13 @@ export default function About({ pageInfo }: Props) {
         <Image data-aos="fade-right" data-aos-duration="1200"
           src={urlFor(pageInfo?.profilePic).url()}
           className='mt-[3rem] sm:mt-[4rem] md:mt-[8rem] lg:mt-[16rem] flex-shrink-0 w-56 h-56 md:w-[300px] md:h-[320px]
-          lg:w-[400px] lg:h-[400px] rounded-full object-cover md:rounded-lg lg:rounded-lg'
+          lg:w-[500px] lg:h-[400px] rounded-full object-cover md:rounded-lg lg:rounded-lg'
           alt=""
           width={560}
           height={560}
         />
         <div className='space-y-10 mt-[3rem] sm:mt-[4rem] md:mt-[8rem] lg:mt-[16rem]  md:pl-[2rem] lg:pl-[3rem] '>
-          <p data-aos="fade-up" data-aos-duration="1200" className='text-[0.8rem] lg:text-[1rem]'>
+          <p data-aos="fade-up" data-aos-duration="1200" className='text-[0.8rem] lg:text-[1rem] lg:px-[5rem] lg:tracking-widest lg:leading-8'>
             {pageInfo?.backgroundInformation}
           </p>
         </div>

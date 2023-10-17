@@ -1,13 +1,17 @@
 import Image from 'next/image'
+import { useEffect, useRef, useState } from 'react';
+import Aos from 'aos';
 import type { GetStaticProps} from 'next';
 import Head from 'next/head';
-import About from "../components/About";
-import ContactMe from "../components/ContactMe"
-import Header from '../components/Header';
-import Hero from '../components/Hero';
-import Projects from "../components/Projects";
-import Skills from "../components/Skills";
-import WorkExperience from '../components/WorkExperience';
+import About from "@/components/About";
+import ContactMe from "@/components/ContactMe"
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import Loading from '@/components/Loading';
+import MusicModal from '@/components/Music/MusicModal';
+import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
+import WorkExperience from '@/components/WorkExperience';
 import Link from 'next/link';
 import { Experience, PageInfo, Project, Skill, Social } from '@/typings';
 import { fetchPageInfo } from '@/Utils/fetchPageInfo';
@@ -25,13 +29,76 @@ type Props = {
 }
 
 const Home  = ({pageInfo, experiences, skills, projects, socials}: Props) => {
+  const [playing,setPlaying] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [modal, setModal] = useState(false)
+  const audio = useRef<HTMLAudioElement | null>(null);
+
+  const audioFile = '/public/files/audio.mp3';
+
+  const play = () => {
+    setPlaying(true);
+    if (audio.current) {
+      audio.current.play();
+    }
+    setModal(false);
+  };
+
+  const pause = () => {
+    setPlaying(false);
+    if (audio.current) {
+      audio.current.pause();
+    }
+    setModal(false);
+  };
+
+  const close = () => {
+    setModal(false)
+  }
+
+  useEffect(() => {
+    Aos.init({
+      offset: 300,
+      delay: 0, 
+      duration: 700,
+    });
+  }, [])
+
+  //This is for the loader timer before the main page comes on
+  useEffect(() =>{
+    const loader = setTimeout(() => {
+      setLoading(false)
+    },2000);
+    return () => clearTimeout(loader)
+  },[])
+   
+  //This sets a timer for the music modal to appear on the screen.
+  useEffect(() =>{
+    const modalTimer = setTimeout(() => {
+      setModal(true)
+    },10000);
+    return () => clearTimeout(modalTimer)
+  },[])
+
+  if(loading){
+    return (
+      <div>
+      <Loading/>
+      </div>
+    )
+  }
+ 
   return (
     <div className="bg-[#010514] text-white h-screen">
       <Head>
         <title>{pageInfo?.firstName} - Portfolio</title>
       </Head>
+
+      {modal && 
+        <MusicModal play={play} pause={pause} closebtn = {close}/>
+      }
       
-      <Header/>
+      <Header play={play} pause={pause} playing={playing}/> 
 
       <section id='hero' className='bg-[#010514]'>
         <Hero pageInfo={pageInfo}/>
@@ -95,5 +162,4 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     revalidate: 10,
   };
 };
-
 
