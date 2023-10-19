@@ -103,8 +103,6 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
 
       {modal && <MusicModal play={play} pause={pause} closebtn={close} />}
 
-      {modal && <div className="overlay" />}
-
       <Header play={play} pause={pause} playing={playing} />
 
       <section id="hero" className="bg-[#010514]">
