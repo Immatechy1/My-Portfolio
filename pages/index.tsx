@@ -37,7 +37,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
   useEffect(() => {
     // Check if the code is running in the browser
     if (typeof window !== "undefined") {
-      const audioFile = "/files/audio.mp3";
+      const audioFile = "/files/Westlife_.mp3";
       const audio = new Audio(audioFile);
       setAudioMusic(audio);
     }

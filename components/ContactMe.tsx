@@ -107,19 +107,19 @@ function ContactMe({ socials }: Props)  {
                     setLoading(false)
                 }
             }
-       } 
+    } 
 
-       return (
+    return (
        
-            <div  className='bg-[#010514] overflow-hidden text-white mt-[-1rem]  pb-[3rem] '>
-                <div className='max-w-[10rem]'>
-                    <ToastContainer />
-                </div>
-                <div data-aos="zoom-in-down" className='text-[2.8rem] text-center p-4 ml-[2rem]   text-white text-[2rem] font-semibold tracking-tighter'>
-                    Contact Me
-                    <div className='text-[#65C23A] mt-[-0.5rem] tracking-normal text-[1.1rem]'>get in touch with me</div>
-                </div>
-                <div className='flex flex-col items-center md:flex-row mt-[2rem] gap-[2rem] p-4 md:items-start justify-center'>
+        <div  className='bg-[#010514] overflow-hidden text-white mt-[-1rem]  pb-[3rem] '>
+            <div className='max-w-[10rem]'>
+                <ToastContainer />
+            </div>
+            <div data-aos="zoom-in-down" className='text-[2.8rem] text-center p-4 ml-[2rem]   text-white text-[2rem] font-semibold tracking-tighter'>
+                Contact Me
+                <div className='text-[#65C23A] mt-[-0.5rem] tracking-normal text-[1.1rem]'>get in touch with me</div>
+            </div>
+            <div className='flex flex-col items-center md:flex-row mt-[2rem] gap-[2rem] p-4 md:items-start justify-center'>
                 <div className='md:flex grid grid-cols-2 md:flex-col gap-4'>
                     <div data-aos="flip-right"  data-aos-duration="1200" className='pl-[1rem] pr-[1rem] pl-[2rem] max-w-[17rem] pr-[2rem] h-[9.5rem]  flex flex-col gap-4 items-center justify-center bg-[#0f172a]'>
                         <div><Image src='/images/location.png' alt='address' width={40} height={40}/></div>
@@ -163,7 +163,7 @@ function ContactMe({ socials }: Props)  {
                         ></textarea>
                     </div>
                     <Button text={loading?
-                            <div className='flex flex-row items-center'>
+                        <div className='flex flex-row items-center'>
                             <Oval
                                 height={18}
                                 width={18}
@@ -175,10 +175,11 @@ function ContactMe({ socials }: Props)  {
                                 secondaryColor="lightgray"
                                 strokeWidth={6}
                                 strokeWidthSecondary={6}
-                                />
-                                <div>SENDING</div>
+                            />
+                            <div>SENDING</div>
                         </div>
-                            : 'SEND MESSAGE'} onClick={handleSendMessage} />
+                        : 'SEND MESSAGE'} onClick={handleSendMessage} 
+                    />
                 </div>
 
             </div>
@@ -186,7 +187,7 @@ function ContactMe({ socials }: Props)  {
             <div className='mt-[5rem] flex flex-col gap-5 items-center justify-center'>
                 <div className='text-[#65C23A] font-semibold text-lg'>Connect with me on social media</div>
                 <div className='flex flex-row'>
-                    <div className='cursor-pointer sc hover:scale-125 duration-500 '/>
+                    <div className='cursor-pointer sc hover:scale-125 duration-500 '>
                         {socials.map((social) => (
                             <SocialIcon
                                 key={social._id}
@@ -195,144 +196,14 @@ function ContactMe({ socials }: Props)  {
                                 bgColor='transparent'
                             />
                         ))}
-                        </div>
-                    
+                    </div>
                 </div>
+                    
             </div>
+        </div>
         
     )
 }
 
 
 export default ContactMe
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// type Inputs = {
-//     name: string,
-//     email: string,
-//     subject: string,
-//     message: string,
-// };
-
-// type Props = {};
-
-// function ContactMe({}: Props) {
-//     const {  register,  handleSubmit, } = useForm<Inputs>();
-
-//     const onSubmit: SubmitHandler<Inputs> = (formData) => {
-//        window.location.href = `mailto:papareact.team@gmail?subject= 
-//        $(formData.subject)& body=Hi, my name is ${formData.name}. 
-//        ${formData.message} ${formData.email}`;
-//     };
-
-//   return (
-//     <div  className='h-screen flex relative flex-col text-center md:text-left md:flex-row
-//      max-w-7xl px-10 justify-evenly mx-auto items-center z-0 xl:pt-96'>
-//         <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
-//             ContactMe 
-//         </h3>
-
-//         <div className='flex flex-col space-y-10 pt-64 sm:pt-28 md:pb-52 lg:pb-96 xl:mt-40'>
-//             <h4 className='text-2xl font-semibold text-center'>
-//                 I have got just what you need.{" "}
-//                 <span className='decoration-[f7ab0a]/50 underline'>
-//                     Lets Talk
-//                 </span>
-//             </h4>
-       
-
-//             <div space-y-10>
-//                 <div className='flex items-center space-x-2 justify-center'>
-//                     <PhoneIcon className='text-[f7ab0a] h-7 w-7 animate-pulse' />
-//                     <p className='text-2xl'>+2348032777946</p>
-//                 </div>
-
-//                 <div className='flex items-center  space-x-2 justify-center'>
-//                     <MapPinIcon className='text-[f7ab0a] h-7 w-7 animate-pulse' />
-//                     <p className='text-xl  '>immaculetanwokejeme@gmail.com</p>
-//                 </div>
-
-//                 <div className='flex items-center space-x-2 justify-center'>
-//                     <EnvelopeIcon className='text-[f7ab0a] h-7 w-7 animate-pulse' />
-//                     <p className='text-2xl'>Lagos, Nigeria</p>
-//                 </div>
-//             </div>
-
-//             <form onSubmit={handleSubmit(onSubmit)} 
-//             className='grid sm:grid  space-y-2 md:flex flex-col md:w-fit md:mx-auto'>
-//                 <div className='grid md:flex space-y-2 md:space-y-0   md:space-x-2'>
-//                     <input 
-//                         {...register('name')} 
-//                         placeholder='Name' 
-//                         className='contactInput' 
-//                         type='name'
-//                     />
-//                     <input 
-//                         {...register('email')} 
-//                         placeholder='Email' 
-//                         className='contactInput' 
-//                         type='email'
-//                     />
-//                 </div>
-
-//                 <input 
-//                     {...register('subject')} 
-//                     placeholder='Subject' 
-//                     className='contactInput' 
-//                     type='text'
-//                 />
-
-//                 <textarea 
-//                     {...register('message')} 
-//                     placeholder='Message' 
-//                     className='contactInput'
-//                 />
-//                 <button type='submit'
-//                 className='bg-[#f7ab0a] py-5 px-10 rounded-md text-black font-bold text-lg'
-//                 >
-//                     Submit
-//                 </button>
-//             </form>
-//         </div> 
-//     </div>
-//   )
-// }
-
-// export default ContactMe
