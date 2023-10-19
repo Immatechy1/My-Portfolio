@@ -22,8 +22,8 @@ function Projects({projects, onClick}: Props) {
     }, []);
   return (
     <div className='bg-[#010514] overflow-hidden'>
-        <div data-aos="fade-up" data-aos-duration="500" className=' w-[100%] pb-[4rem] md:pb-[6rem] lg:pb-[8rem]'>
-            <h3 className='uppercase text-2xl text-center'>
+        <div data-aos="fade-up" data-aos-duration="500" className='w-[100%] pb-[4rem] md:pb-[6rem] lg:pb-[6rem]'>
+            <h3 className='uppercase text-2xl mt-[8rem] font-bold text-center'>
                 Projects 
             </h3>
             <div className=''>

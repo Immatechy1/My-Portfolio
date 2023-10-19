@@ -14,10 +14,10 @@ function Skil({ skill, directionLeft }: Props) {
     <div className='group relative flex cursor-pointer'>
         <motion.div
             initial={{ 
-                x: directionLeft ? -200 : 100,
+                x: directionLeft ? -50 : 50,
                 opacity: 0
             }}
-            whileInView={{ opacity: 1, x:0 }}
+            whileInView={{ opacity: 1, x:0, y:0}}
             transition={{ duration: 1 }}>
             <Image
                 src={urlFor(skill?.image).url()}

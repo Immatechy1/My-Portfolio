@@ -109,13 +109,12 @@ function ContactMe({ socials }: Props)  {
             }
     } 
 
-    return (
-       
-        <div  className='bg-[#010514] overflow-hidden text-white mt-[-1rem]  pb-[3rem] '>
+    return (    
+        <div  className='bg-[#010514] overflow-hidden text-white mt-[-1rem] pb-[3rem] xl: pt-[4rem]'>
             <div className='max-w-[10rem]'>
                 <ToastContainer />
             </div>
-            <div data-aos="zoom-in-down" className='text-[2.8rem] text-center p-4 ml-[2rem]   text-white text-[2rem] font-semibold tracking-tighter'>
+            <div data-aos="zoom-in-down" className='text-[2.8rem] text-center p-4 ml-[2rem] text-white text-[2rem] xl:pt-[8rem] font-semibold tracking-tighter'>
                 Contact Me
                 <div className='text-[#65C23A] mt-[-0.5rem] tracking-normal text-[1.1rem]'>get in touch with me</div>
             </div>
