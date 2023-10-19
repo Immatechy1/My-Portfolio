@@ -96,7 +96,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
   }
 
   return (
-    <div className="bg-[#010514] text-white h-screen">
+    <div className="bg-[#010514] text-white">
       <Head>
         <title>{pageInfo?.firstName} - Portfolio</title>
       </Head>

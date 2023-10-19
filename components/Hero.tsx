@@ -12,7 +12,7 @@ type Props = {
 export default function Hero({pageInfo}: Props) {
     React.useEffect(() => {
         AOS.init({
-          duration: 100,
+          duration: 800,
           easing: 'ease-in-out',
           offset: 100,
           delay: 100,
@@ -21,8 +21,8 @@ export default function Hero({pageInfo}: Props) {
     }, []);
     
     return (
-        <div className='bg-[#010514]   overflow-hidden'>
-            <div data-aos="zoom-out" data-aos-duration="100" className='flex relative p-[1rem]' >
+        <div className='bg-[#010514] overflow-hidden'>
+            <div data-aos="zoom-out" data-aos-duration="1200" className='flex relative p-[1rem]' >
                 <div className='z-[2] lg:pt-[12.5rem] md:pt-[14rem] ml-[-0.6rem] sm:pt-[12rem] pt-[10rem] lg:pl-[3rem]'>
                     <div className='lg:text-[8.5rem] md:text-[6rem] text-[3.7rem] text-[#f3f1f1] font-semibold tracking-tighter'>{pageInfo?.firstName} </div>
                     <div className='lg:text-[8.5rem] md:text-[6rem] mt-[-2rem] text-[3.7rem] text-[#f3f1f1] lg:mt-[-5rem]  font-semibold tracking-tighter'>{pageInfo?.lastName}</div>
