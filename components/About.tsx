@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
-import 'aos/dist/aos.css'; // Import AOS styles
+import 'aos/dist/aos.css'; 
 import AOS from 'aos';
 import { urlFor } from '@/sanity';
 import Button from './button/Button';
