@@ -51,6 +51,10 @@ export interface Project extends SanityBody {
 }
   
 export interface Experience extends SanityBody {
+    icon: string | undefined;
+    iconBg: Background<string | number> | undefined;
+    date: Date;
+    src: Image;
     map(arg0: (experience: any) => import("react").JSX.Element): import("react").ReactNode;
     _type: "experience";
     company: string;
