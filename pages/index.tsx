@@ -100,7 +100,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
       <Head>
         <title>{pageInfo?.firstName} - Portfolio</title>
       </Head>
-
+      
       {modal && <MusicModal play={play} pause={pause} closebtn={close} />}
 
       <Header play={play} pause={pause} playing={playing} />
