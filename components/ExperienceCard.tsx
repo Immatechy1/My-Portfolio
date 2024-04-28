@@ -25,7 +25,8 @@ export default function ExperienceCard({experience}: Props) {
                     alt="" 
                   /> */}
                 </div>
-            }      
+            }  
+                
         >
             <div className='pb-[1rem] '>
                 <h3 className="text-white text-[18px] md:text-[22px] font-semibold">{experience.jobTitle}</h3>
