@@ -20,13 +20,12 @@ export default function ExperienceCard({experience}: Props) {
             iconStyle={{ background: experience.iconBg }} 
             icon={
                 <div>
-                  {/* <img className="w-[100%] h-[100%] object-contain rounded-full"
+                  <img className="w-[100%] h-[100%] object-contain rounded-full"
                     src={urlFor(experience?.companyImage).url()}
                     alt="" 
-                  /> */}
+                  />
                 </div>
-            }  
-                
+            }      
         >
             <div className='pb-[1rem] '>
                 <h3 className="text-white text-[18px] md:text-[22px] font-semibold">{experience.jobTitle}</h3>
