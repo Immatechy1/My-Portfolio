@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { urlFor } from '@/sanity';
 import { Experience } from '@/typings';
-import { VerticalTimelineElement, VerticalTimeline } from "react-vertical-timeline-component";
+import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
 type Props = {
@@ -24,6 +24,8 @@ export default function ExperienceCard({experience}: Props) {
                   <Image className="w-[100%] h-[100%] object-contain rounded-full"
                     src={urlFor(experience?.companyImage).url()}
                     alt="" 
+                    width={540}
+                    height={540}
                   />
                 </div>
             }      
