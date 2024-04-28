@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { urlFor } from '@/sanity';
 import { Experience } from '@/typings';
 import { VerticalTimelineElement, VerticalTimeline } from "react-vertical-timeline-component";
@@ -20,7 +21,7 @@ export default function ExperienceCard({experience}: Props) {
             iconStyle={{ background: experience.iconBg }} 
             icon={
                 <div>
-                  <img className="w-[100%] h-[100%] object-contain rounded-full"
+                  <Image className="w-[100%] h-[100%] object-contain rounded-full"
                     src={urlFor(experience?.companyImage).url()}
                     alt="" 
                   />
