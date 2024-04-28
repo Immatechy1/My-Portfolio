@@ -101,35 +101,35 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         <title>{pageInfo?.firstName} - Portfolio</title>
       </Head>
 
-      {/* {modal && <MusicModal play={play} pause={pause} closebtn={close} />} */}
+      {modal && <MusicModal play={play} pause={pause} closebtn={close} />}
 
       <Header play={play} pause={pause} playing={playing} />
 
-      {/* <section id="hero" className="bg-[#010514]">
+      <section id="hero" className="bg-[#010514]">
         <Hero pageInfo={pageInfo} />
-      </section> */}
+      </section>
 
-      {/* <section id="about" className="">
+      <section id="about" className="">
         <About pageInfo={pageInfo} />
-      </section> */}
+      </section>
 
-      {/* <section id="experience" className="bg-[#010514] ">
+      <section id="experience" className="bg-[#010514] ">
         <WorkExperience experiences={experiences} />
-      </section> */}
+      </section>
 
-      {/* <section id="skills" className="snap-start">
+      <section id="skills" className="snap-start">
         <Skills skills={skills} />
-      </section> */}
+      </section>
 
-      {/* <section id="projects" className="bg-[#010514] ">
+      <section id="projects" className="bg-[#010514] ">
         <Projects projects={projects} />
-      </section> */}
+      </section>
 
-      {/* <section id="contact" className="bg-[#010514] ">
+      <section id="contact" className="bg-[#010514] ">
         <ContactMe socials={socials} />
-      </section> */}
+      </section>
 
-      {/* <Link href="#hero">
+      <Link href="#hero">
         <div className="bg-[#010514] flex flex-col text-white p-4 gap-0 items-center  mt-[-1rem] pb-[2rem]  justify-center">
           <div className="text-[0.9rem] tracking-tight">A portfolio by</div>
           <div className="text-[1.2rem] text-[#65C23A] font-semibold  ">
@@ -151,7 +151,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
             </div>
           </div>
         </div>
-      </Link> */}
+      </Link>
     </div>
   );
 };
