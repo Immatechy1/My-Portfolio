@@ -17,7 +17,7 @@ export default function ExperienceCard({experience}: Props) {
                 color: "#fff",
             }}
             contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-           
+            date={experience.dateStarted}
             iconStyle={{ background: experience.iconBg }} 
             icon={
                 <div>
