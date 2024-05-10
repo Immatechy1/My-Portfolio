@@ -110,14 +110,13 @@ function ContactMe({ socials }: Props)  {
     } 
 
     return (    
-        <div  className='bg-[#010514] overflow-hidden text-white mt-[-1rem] pb-[3rem] xl: pt-[4rem]'>
+        <div  className='bg-[#010514] overflow-hidden text-white pt-[2rem]'>
             <div className='max-w-[10rem]'>
                 <ToastContainer />
             </div>
-            <div data-aos="zoom-in-down" className='text-[2.8rem] text-center p-4 ml-[2rem] text-white text-[2rem] xl:pt-[8rem] font-semibold tracking-tighter'>
-                Contact Me
-                <div className='text-[#65C23A] mt-[-0.5rem] tracking-normal text-[1.1rem]'>get in touch with me</div>
-            </div>
+            <h3 className='uppercase text-2xl mt-[6rem] font-bold text-center'>Contact</h3>
+            <h3 className='text-[#65C23A] mt-[1rem] tracking-widest text-center text-[1.1rem]'>Get in touch with me</h3>
+
             <div className='flex flex-col items-center md:flex-row mt-[2rem] gap-[2rem] p-4 md:items-start justify-center'>
                 <div className='md:flex grid grid-cols-2 md:flex-col gap-4'>
                     <div data-aos="flip-right"  data-aos-duration="1200" className='pl-[1rem] pr-[1rem] pl-[2rem] max-w-[17rem] pr-[2rem] h-[9.5rem]  flex flex-col gap-4 items-center justify-center bg-[#0f172a]'>
@@ -130,7 +129,7 @@ function ContactMe({ socials }: Props)  {
                     </div>
                     <div data-aos="flip-right"  data-aos-duration="1200" className='pl-[1rem] pr-[1rem] pl-[2rem] max-w-[17rem] pr-[2rem] h-[9.5rem]  flex flex-col gap-4 items-center justify-center bg-[#0f172a]'>
                         <div><Image src='/images/telephone.png' alt='address' width={40} height={40}/></div>
-                        <div className='text-center text-[0.96rem]  '>+234 8032777946</div>
+                        <div className='text-center text-[0.96rem]  '>+2348032777946</div>
                     </div>
                     <div data-aos="flip-right"  data-aos-duration="1200" className='pl-[1rem] pr-[1rem] pl-[2rem] max-w-[17rem] pr-[2rem] h-[9.5rem]  flex flex-col gap-4 items-center justify-center bg-[#0f172a]'>
                         <div><Image src='/images/verified.png' alt='address' width={40} height={40}/></div>

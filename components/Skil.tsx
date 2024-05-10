@@ -21,7 +21,7 @@ function Skil({ skill, directionLeft }: Props) {
             transition={{ duration: 1 }}>
             <Image
                 src={urlFor(skill?.image).url()}
-                className='rounded-full border  object-cover w-16 h-16 sm:w-20 sm:h-20 md:w-32 md:h-32 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out'
+                className='rounded-full border object-cover w-16 h-16 sm:w-20 sm:h-20 md:w-32 md:h-32 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out'
                 alt=""
                 width={560}
                 height={560}

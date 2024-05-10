@@ -13,11 +13,11 @@ export default function ExperienceCard({experience}: Props) {
     return(
         <VerticalTimelineElement
             contentStyle={{
-                background: "#1d1836",
+                background: "#0f172a",
                 color: "#fff",
             }}
             contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-            date={experience.dateStarted}
+           
             iconStyle={{ background: experience.iconBg }} 
             icon={
                 <div>
@@ -31,15 +31,15 @@ export default function ExperienceCard({experience}: Props) {
             }      
         >
             <div className='pb-[1rem] '>
-                <h3 className="text-white text-[18px] md:text-[22px] font-semibold">{experience.jobTitle}</h3>
-                <p className="text-secondary text-[16px]  font-semibold"
+                <h3 className="text-white text-[16px] md:text-[18px] font-medium">{experience.jobTitle}</h3>
+                <p className="text-secondary text-[14px]  font-medium"
                 style={{ margin: 0 }}
                 >
                 {experience.company}
                 </p>
             </div>
-            
-            <ul className="list-disc space-y-2 px-[1.2rem] md:px-[1.2rem] max-h-72 w-1/14 overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-800 ">
+
+            <ul className="list-disc space-y-2 px-[1rem] md:px-[1.2rem] max-h-60 w-1/14 overflow-y-scroll ">
                 {experience.points.map((point, index) => (
                 <li
                     key={`experience-point-${index}`}

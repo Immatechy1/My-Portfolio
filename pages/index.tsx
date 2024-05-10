@@ -37,7 +37,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
   useEffect(() => {
     // Check if the code is running in the browser
     if (typeof window !== "undefined") {
-      const audioFile = "/files/Westlife_.mp";
+      const audioFile = "/files/Westlife_.mp3";
       const audio = new Audio(audioFile);
       setAudioMusic(audio);
     }
@@ -105,7 +105,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
 
       <Header play={play} pause={pause} playing={playing} />
 
-      <section id="hero" className="bg-[#010514]">
+      <section id="hero" className="">
         <Hero pageInfo={pageInfo} />
       </section>
 
