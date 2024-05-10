@@ -8,7 +8,7 @@ import "react-vertical-timeline-component/style.min.css";
 type Props = {
     experience: Experience;
 };
-
+// date={experience.dateStarted}
 export default function ExperienceCard({experience}: Props) { 
     return(
         <VerticalTimelineElement
@@ -17,7 +17,8 @@ export default function ExperienceCard({experience}: Props) {
                 color: "#fff",
             }}
             contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-            date={experience.dateStarted}
+            
+            date={new Date(experience.dateStarted).toLocaleDateString()}
             iconStyle={{ background: experience.iconBg }} 
             icon={
                 <div>
