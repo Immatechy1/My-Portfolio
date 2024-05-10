@@ -22,13 +22,13 @@ function Projects({projects, onClick}: Props) {
     }, []);
   return (
     <div className='bg-[#010514] overflow-hidden'>
-        <div data-aos="fade-up" data-aos-duration="500" className='w-[100%] pb-[4rem] md:pb-[6rem] lg:pb-[6rem]'>
-            <h3 className='uppercase text-2xl mt-[8rem] font-bold text-center'>
+        <div data-aos="fade-up" data-aos-duration="500" className='w-[100%]'>
+            <h3 className='uppercase text-2xl mt-[6rem] font-bold text-center'>
                 Projects 
             </h3>
             <div className=''>
                 {projects?.map((project, i) => (
-                <div key={project._id} data-aos="fade-left" data-aos-duration="500" className='grid lg:flex md:px-[4rem]  mt-[1.8rem] md:mt-[8rem] lg:mt-[8rem]'>
+                <div key={project._id} data-aos="fade-left" data-aos-duration="500" className='grid lg:flex md:px-[4rem] mt-[1.8rem] md:mt-[8rem] lg:mt-[8rem]'>
                     <div className='lg:pr-[5rem] order-last lg:order-none px-[1.5rem] md:px-[1rem] lg:px:0'>
                         <h1 className='text-2xl md:text-3xl lg:text-3xl mt-[4rem] lg:mt-[0] font-bold '> {project?.title}</h1>
                         <h1 className='tracking-wide text-base lg:leading-10 leading-7 md:text-lg lg:text-lg mt-[1rem] md:mt-[1.5rem] lg:mt-[2rem]'> {project?.summary}</h1>
@@ -43,14 +43,14 @@ function Projects({projects, onClick}: Props) {
                         </div>
                     </div>
 
-                    <div className='relative mt-[3rem] md:mt-[0] lg:mt-[1rem]  px-[2rem] px-[1.5rem] md:px-[1rem] lg:px:0'>
+                    <div className='relative mt-[3rem] md:mt-[0] lg:mt-[1rem] px-[1.6rem] md:px-[1rem] lg:px:0'>
                         {project.projectImage && (
-                        <Image className='lg:w-[150rem] md:w-[100rem] lg:h-auto lg:max-w-lg' 
-                            src={urlFor(project?.projectImage).url()} 
-                            alt=""
-                            width={400}
-                            height={400}
-                        />
+                            <Image className='lg:w-[150rem] lg:h-[24rem] md:w-[100rem] md:h-[24rem] w-[60rem] h-[14rem] lg:h-auto lg:max-w-lg rounded-3xl ' 
+                                src={urlFor(project?.projectImage).url()} 
+                                alt=""
+                                width={400}
+                                height={400}
+                            />
                         )}
                     </div>   
                 </div>

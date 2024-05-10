@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { GiCancel, GiHamburgerMenu } from "react-icons/gi";
 import { FaPause, FaPlay } from "react-icons/fa";
 import { motion } from "framer-motion";

@@ -22,13 +22,12 @@ function WorkExperience({experiences}: Props) {
   }, []);
 
   return (
-    <div className='bg-[#010514] flex relative overflow-hidden px-6 sm:px-4 flex-col 
-      max-w-full sm:px-12 justify-evenly mx-auto mt-[-1rem]'>
-      <h3 className='text-center font-bold mt-[6rem] md:mt-[7rem] uppercase text-2xl'>   
-      Work Experience
+    <div className='bg-[#010514] overflow-hidden mt-[6rem] px-4 sm:px-6 md:px-14'>
+      <h3 className='text-center items-center uppercase font-bold text-2xl'>   
+       Work Experience
       </h3>
 
-      <div data-aos-duration="1200" className="mt-[1rem] md:mt-[2rem] lg:mt-[4rem] flex flex-col">
+      <div data-aos-duration="1200" className="mt-[1rem] md:mt-[2rem] lg:mt-[6rem] flex flex-col">
         <VerticalTimeline>
           {experiences.map((experience, index) => (
             <ExperienceCard
